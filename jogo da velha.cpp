@@ -38,13 +38,24 @@ int main(){
 	printf("O - 2 \n");
 	printf("selecione um valor: [1 / 2] ");
 	scanf("%c", &estado);
-	
-	//define X ou O
-	if(estado == '1'){
-		estado = 'X';
-	}else if(estado == '2'){
-		estado = 'O';
-	}
+
+    	if(estado == '1'){
+		    estado = 'X';
+		}else if(estado == '2'){
+		    estado = 'O';
+	    }else{
+		    while(estado!='1' || estado!='2'){
+			    printf("valor invalido, digite novamente:");
+			    scanf("%c", &estado);
+		    	if(estado == '1'){
+		            estado = 'X';
+		            break;
+	            }else if(estado == '2'){
+		            estado = 'O';
+		            break;
+	            }
+		    }
+	    }
 	
 	//imprime vetor
 	for(l = 1; l <= 3; l++){
