@@ -1,17 +1,19 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int main(){
+	char jogada, estado, vitoria, vetor[3][3], jogador1[30], jogador2[30];
+	int l, c, i, linha, coluna, jogo;
 	
-	char jogada, estado, vitoria, vetor[3][3];
-	int l, c, linha, coluna, jogo;
-		
 	//instancia o vetor
-	for(l = 1; l <= 3; l++){
-		for(c = 1; c <= 3; c++){
-			vetor[l][c] = '.';
-		}
+	char startVelha(){
+	    for(l = 1; l <= 3; l++){
+		    for(c = 1; c <= 3; c++){
+			    vetor[l][c] = '.';
+		    }
+	    }
 	}
+
+int main(){
 	
 	printf("   ##### ##### ##### ##### \n");
 	printf("     #   #   # #   # #   # \n");
@@ -32,12 +34,23 @@ int main(){
 	printf("  #   ##### ##### #   # #   # \n");
 	printf("\n");
 	
+	//nome dos jogadores
+	printf("Informe o nome dos jogadores\n");
+	printf("Nome jogador 1: ");
+	scanf("%s", &jogador1);
+	fflush(stdin);
+	printf("Nome jogador 2: " );
+	scanf("%s", &jogador2);
+	fflush(stdin);
+	
+	
 	//inicio do jogo
-	printf("iniciar com X ou O ? \n");
+	printf("\niniciar com X ou O ? \n");
 	printf("X - 1 \n");
 	printf("O - 2 \n");
 	printf("selecione um valor: [1 / 2] ");
 	scanf("%c", &estado);
+	fflush(stdin);
 
     	if(estado == '1'){
 		    estado = 'X';
@@ -55,15 +68,19 @@ int main(){
 		            break;
 	            }
 		    }
-	    }
-	
+	    }	    
+	    
+	//instancia vetor
+	startVelha();
+	    
 	//imprime vetor
 	for(l = 1; l <= 3; l++){
 		for(c = 1; c <= 3; c++){
 			printf(" %c ", vetor[l][c]);
 		}
-		printf("\n");
+		printf("\n\n");
 	}
+	
 	
 	jogo = 1;
 	
@@ -155,6 +172,7 @@ int main(){
 			jogo = 0;
 			break;
 		}
+		
 	    
 	    //alterna as jogadas
 	    if(estado == 'X'){
