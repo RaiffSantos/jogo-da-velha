@@ -97,7 +97,7 @@ int main(){
 				jogada = 1;
 			}
 			
-			//user vence jogando nas pontas
+			//Possibilidade de usuario vencer
 			if(vetor[1][1] == 'X' && vetor[1][3] == '.' && vetor[3][1] == '.' && vetor[3][3] == '.' && jogada == 0){
 				vetor[1][3] = 'O';
 				jogada = 1;
@@ -111,7 +111,7 @@ int main(){
 				vetor[3][1] = 'O';
 				jogada = 1;
 			}
-            //fim user vence			
+                        //fim user vence			
 			
 			
 			//vitoria
@@ -276,7 +276,7 @@ int main(){
 			
 			
 			
-			//jogadas com decis„o
+			//jogadas com decis√£o
 			if(vetor[1][1] == '.' && vetor[2][2] == '.' && vetor[3][3] == 'O' && jogada == 0){
 				
 				vetor[1][1] == 'O';
@@ -442,33 +442,33 @@ int main(){
 				vetor[2][2] = 'O';
 				jogada = 1;
 			}*/
-			//fim decis„o
+			//fim decis√£o
 			
 		}
 		
-		//condiÁıes de vitoria
-	    if( vetor[1][1] != '.' && vetor[2][1] != '.' && vetor[3][1] != '.' && vetor[1][1] == vetor[2][1] && vetor[2][1] == vetor[3][1]){ //condiÁ„o 1
+		//condi√ß√µes de vitoria
+	    if( vetor[1][1] != '.' && vetor[2][1] != '.' && vetor[3][1] != '.' && vetor[1][1] == vetor[2][1] && vetor[2][1] == vetor[3][1]){ //condi√ß√£o 1
 	    	//vitoria = vetor[1][1];
 	    	vencedor = estado;
-		}else if(vetor[1][2] != '.' && vetor[2][2] != '.' && vetor[3][2] != '.' && vetor[1][2] == vetor[2][2] && vetor[2][2] == vetor[3][2]){ //condiÁ„o 2
+		}else if(vetor[1][2] != '.' && vetor[2][2] != '.' && vetor[3][2] != '.' && vetor[1][2] == vetor[2][2] && vetor[2][2] == vetor[3][2]){ //condi√ß√£o 2
 			//vitoria = vetor[1][2];
 			vencedor = estado;
-		}else if(vetor[1][3] != '.' && vetor[2][3] != '.' && vetor[3][3] != '.' && vetor[1][3] == vetor[2][3] && vetor[2][3] == vetor[3][3]){ //condiÁ„o 3
+		}else if(vetor[1][3] != '.' && vetor[2][3] != '.' && vetor[3][3] != '.' && vetor[1][3] == vetor[2][3] && vetor[2][3] == vetor[3][3]){ //condi√ß√£o 3
 			//vitoria = vetor[1][3];
 			vencedor = estado;
-		}else if(vetor[1][1] != '.' && vetor[1][2] != '.' && vetor[1][3] != '.' && vetor[1][1] == vetor[1][2] && vetor[1][2] == vetor[1][3]){ //condiÁ„o 4
+		}else if(vetor[1][1] != '.' && vetor[1][2] != '.' && vetor[1][3] != '.' && vetor[1][1] == vetor[1][2] && vetor[1][2] == vetor[1][3]){ //condi√ß√£o 4
 			//vitoria = vetor[1][1];
 			vencedor = estado;
-		}else if(vetor[2][1] != '.' && vetor[2][2] != '.' && vetor[2][3] != '.' && vetor[2][1] == vetor[2][2] && vetor[2][2] == vetor[2][3]){ //condiÁ„o 5
+		}else if(vetor[2][1] != '.' && vetor[2][2] != '.' && vetor[2][3] != '.' && vetor[2][1] == vetor[2][2] && vetor[2][2] == vetor[2][3]){ //condi√ß√£o 5
 			//vitoria = vetor[2][1];
 			vencedor = estado;
-		}else if(vetor[3][1] != '.' && vetor[3][2] != '.' && vetor[3][3] != '.' && vetor[3][1] == vetor[3][2] && vetor[3][2] == vetor[3][3]){ //condiÁ„o 6
+		}else if(vetor[3][1] != '.' && vetor[3][2] != '.' && vetor[3][3] != '.' && vetor[3][1] == vetor[3][2] && vetor[3][2] == vetor[3][3]){ //condi√ß√£o 6
 			//vitoria = vetor[3][1];
 			vencedor = estado;
-		}else if(vetor[1][1] != '.' && vetor[2][2] != '.' && vetor[3][3] != '.' && vetor[1][1] == vetor[2][2] && vetor[2][2] == vetor[3][3]){ //condiÁ„o 7
+		}else if(vetor[1][1] != '.' && vetor[2][2] != '.' && vetor[3][3] != '.' && vetor[1][1] == vetor[2][2] && vetor[2][2] == vetor[3][3]){ //condi√ß√£o 7
 			//vitoria = vetor[1][1];
 			vencedor = estado;
-		}else if(vetor[1][3] != '.' && vetor[2][2] != '.' && vetor[3][1] != '.' && vetor[1][3] == vetor[2][2] && vetor[2][2] == vetor[3][1]){ //condiÁ„o 8
+		}else if(vetor[1][3] != '.' && vetor[2][2] != '.' && vetor[3][1] != '.' && vetor[1][3] == vetor[2][2] && vetor[2][2] == vetor[3][1]){ //condi√ß√£o 8
 			//vitoria = vetor[1][3];
 			vencedor = estado;
 		}
